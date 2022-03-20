@@ -6,7 +6,7 @@ Analyzing stock data
 ## Results: Using images and examples of your code, compare the stock performance between 2017 and 2018, as well as the execution times of the original script and the refactored script.
 
 
-
+Link to the spreassheet (macro enabled): [VBA-Challenge](VBA_Challenge.xlsm)
 
 ![VBA-Challenge - 2017 - time](/resources/VBA_Challenge_2017.png)
 
