@@ -57,7 +57,9 @@ In the refactored code, the following improvements were made by using a ticker i
 The results of this analysis showed that the DAQO Company performed well in 2017 (199.4%) followed by the company with the ticker SEDG. Among the top most companies those had the largest positive returns in 2017 were DQ (199.4%), SEDG (184.5%), ENPH (129.5%). However, DAQO performance of DAQO was bad in 2018. Almost all companies workedwell in 2017 and only two companies showed positive returns (81.9% for ENPH, 84.0% for RUN) in 2018.  
 
 ### Performance of VBA Scripts
-The time taken to run the whole analysis for 2017 data was 0.04 s (40 ms). Figure 1 below shows the pop up. ![VBA-Challenge - 2017 - time](/resources/VBA_Challenge_2017.png). The analysis time taken before refactoring for 2017 data was 0.26 s.It was 6.5 times faster after refactoring the code.
+The time taken to run the whole analysis for 2017 data was 0.04 s (40 ms). Figure 1 below shows the pop up. The analysis time taken before refactoring for 2017 data was 0.26 s.It was 6.5 times faster after refactoring the code.
+
+![VBA-Challenge - 2017 - time](/resources/VBA_Challenge_2017.png). 
 
 ### Figure 1: Screenshot showing the time needed to analyze the entire datasheet for 2017 (3012 data).
 
@@ -69,7 +71,7 @@ The time taken to run the whole analysis for 2017 data was 0.05 s (50 ms). Figur
 
 ## Summary:
 
-In summary, advantages of refactoring a code includes the following: 1) the running time for the code becomes faster, 2) data in variables can be stored in memory efficiently when using indecies. 3) calculations are more effective and faster. Some of the disadvantages include the following: 1) there may be situations of plagiarism when refactoring someones code, 2) any intellectual property issues may arise when refactoring.3) if there is an undetected error in the code (especially in formulas for calculations, even though the code produces results before refactoring), it can easily be missed and remained in the code undetected UNLESS the code is thoroughly checked (quality check step).   
+In summary, advantages of refactoring a code includes the following: 1) the running time for the code becomes faster, 2) data in variables can be stored in memory efficiently when using indecies. 3) calculations are more effective and faster. Some of the disadvantages include the following: 1) there may be situations of plagiarism when refactoring someones code, 2) any intellectual property issues may arise when refactoring, 3) if there is an undetected error in the code (especially in formulas for calculations, even though the code produces results before refactoring), it can easily be missed and remained in the code undetected UNLESS the code is thoroughly checked (quality check step). Another con (disadvantage) refactoring a code I can think of is the potential risk of introducing a malicious portion of a code if you are not careful when refactoring someone's code.    
 
 In our analysis, we have seen a much faster code after refactoring the code. It is definetely an advantage (pros). However, I did not see any disadvantages (cons) of using refactoring the VBA script in this analysis. 
 
