@@ -10,6 +10,48 @@ In this challenge project, we have edited, or refactored, the code, Module2_VBA_
 
 The spreasdsheet with the whole analysis was uploaded to the GitHub and tthe link to the spreassheet (macro enabled) is included here: [VBA-Challenge](VBA_Challenge.xlsm). The refractired VB script is available in the followiung link: [VBA-Challenge-Script](VBA_Challenge.vbs)
 
+### Improvements to Code (Refactoring)
+
+In the refactored code, the following improvements were made by using a ticker index and arrays. Using an the arrays that used indexes to store data improved the efficiency of running the code and are briefly explained below. 
+
+    a) a ticker index (tickerIndex) was created and set equal to zero before iterating over all the rows: tickerIndex = 0
+    b) Three output arrays for storing data (tickerStartingPrices, and tickerEndingPrices. tickerVolumes) were created. 
+
+    Dim tickerVolumes(12) As Long
+    
+    Dim tickerStartingPrices(12) As Single
+    
+    Dim tickerEndingPrices(12) As Single
+    
+    c) Used a "for" loop to initiset to set equal to tickerVolumes = 0
+    
+    For i = 0 To 11
+    
+        tickerVolumes(i) = 0
+        
+    Next i
+    
+    d) Using tickerIndex, the current ticker volume for each ticker is increased by using the formula: 
+    
+    tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
+    
+    e) checked if the current row is the first row with the selected tickerIndex
+    
+     If Cells(i, 1).Value <> Cells(i - 1, 1).Value Then
+        
+            tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
+            
+        End If
+    
+    f) similarly, checked if the current row is the last row with the selected tickerIndex
+    
+    If Cells(i, 1).Value <> Cells(i + 1, 1).Value Then
+        
+            tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
+            
+    g) Looped through the arrays to output the Ticker, Total Daily Volume, and Return.
+    
+   
 ### Analysis of the stocks for 2017 and 2018
 
 The results of this analysis showed that the DAQO Company performed well in 2017 (199.4%) followed by the company with the ticker SEDG. Among the top most companies those had the largest positive returns in 2017 were DQ (199.4%), SEDG (184.5%), ENPH (129.5%). However, DAQO performance of DAQO was bad in 2018. Almost all companies workedwell in 2017 and only two companies showed positive returns (81.9% for ENPH, 84.0% for RUN) in 2018.  
